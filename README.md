@@ -10,6 +10,9 @@ The sofware was program in Java emphasizing the use of 3 design patterns.
 
 ## Database
 
+[Data](https://github.com/orianeido/FormulaOneDB/blob/main/FormulaOne_Data.sql) |
+[Tables](https://github.com/orianeido/FormulaOneDB/blob/main/FormulaOne_Tabels.sql)
+
 ![FormulaOneDB Project ERD](https://user-images.githubusercontent.com/8725819/188173086-11893a6d-57dc-4d78-911a-c54be2c50a07.jpg)
 
 ## Software
@@ -18,7 +21,9 @@ Envirment: IntelliJ IDEA
 #### Design Patterns
 - Singleton
 - Command
-- Observer
+- Observer 
+
+[Code](https://github.com/orianeido/FormulaOneDB/tree/main/FormulaOneDB)
 #### UML
 ![FormulaOneDB Project UML - Class Diagram](https://user-images.githubusercontent.com/8725819/188173408-74b053dc-c6ce-475c-a599-7eccbecf3588.jpg)
 
