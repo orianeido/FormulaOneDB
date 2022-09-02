@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="500.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.formulaone.Controller.constructorResultsController">
+  <children>
+      <MenuBar>
+         <menus>
+            <Menu mnemonicParsing="false" text="Mode" disable="true">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="User" />
+                  <MenuItem mnemonicParsing="false" text="Admin" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About &quot;Formula 1 Info&quot;" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="539.0" prefWidth="1086.0" VBox.vgrow="ALWAYS">
+         <children>
+            <TableView fx:id="table_constructor" layoutX="44.0" layoutY="58.0" prefHeight="394.0" prefWidth="990.0">
+              <columns>
+                <TableColumn fx:id="col_name" prefWidth="175.0" text="Name" />
+                <TableColumn fx:id="col_country" prefWidth="77.0" text="Country" />
+                  <TableColumn fx:id="col_racesEntered" prefWidth="91.0" text="RacesEntered" />
+                  <TableColumn fx:id="col_racesStarted" prefWidth="84.0" text="RacesStarted" />
+                  <TableColumn fx:id="col_drivers" prefWidth="59.0" text="Drivers" />
+                  <TableColumn fx:id="col_totalEntries" prefWidth="82.0" text="TotalEntries" />
+                  <TableColumn fx:id="col_wins" prefWidth="51.0" text="Wins" />
+                  <TableColumn fx:id="col_points" prefWidth="56.0" text="Points" />
+                  <TableColumn fx:id="col_poles" prefWidth="48.0" text="Poles" />
+                  <TableColumn fx:id="col_fastestLaps" prefWidth="75.0" text="FL" />
+                  <TableColumn fx:id="col_podiums" prefWidth="65.0" text="Podiums" />
+                  <TableColumn fx:id="col_wcc" prefWidth="53.0" text="WCC" />
+                  <TableColumn fx:id="col_wdc" prefWidth="73.0" text="WDC" />
+              </columns>
+            </TableView>
+            <Label layoutX="44.0" layoutY="21.0" prefHeight="31.0" prefWidth="190.0" text="Constructors Table">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+             <Button id="return_button" layoutX="982.0" layoutY="24.0" mnemonicParsing="false" onAction="#returnToSearchView" text="Return" />
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>

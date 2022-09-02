@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="500.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.formulaone.Controller.searchViewController">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="Mode" disable="true">
+          <items>
+            <MenuItem mnemonicParsing="false" text="User" />
+            <MenuItem mnemonicParsing="false" onAction="#switchToAdminPanel" text="Admin" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About &quot;Formula 1 Info&quot;" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Button fx:id="search_button" layoutX="681.0" layoutY="172.0" mnemonicParsing="false" onAction="#search" text="Search" />
+            <RadioButton id="searchType_driver" layoutX="347.0" layoutY="210.0" mnemonicParsing="false" selected="true" text="Driver">
+               <toggleGroup>
+                  <ToggleGroup fx:id="searchType" />
+               </toggleGroup>
+            </RadioButton>
+            <TextField fx:id="search_text" layoutX="347.0" layoutY="172.0" prefHeight="25.0" prefWidth="324.0" />
+            <ImageView fx:id="logo_image" fitHeight="74.0" fitWidth="200.0" layoutX="431.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@formula-1-logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="451.0" layoutY="117.0" prefHeight="32.0" prefWidth="160.0" text="Formula 1 Info">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <RadioButton id="searchType_constructors" layoutX="413.0" layoutY="210.0" mnemonicParsing="false" text="Constructor" toggleGroup="$searchType" />
+            <RadioButton id="searchType_grandprix" layoutX="509.0" layoutY="210.0" mnemonicParsing="false" text="Grand Prix" toggleGroup="$searchType" disable="true"/>
+            <Button id="drivers_button" layoutX="347.0" layoutY="256.0" mnemonicParsing="false" onAction="#switchToDriversTable" text="Show All Drivers" />
+            <Button id="constructors_button" layoutX="461.0" layoutY="256.0" mnemonicParsing="false" onAction="#switchToConstructorsTable" text="Show All Constructors" />
+            <Button id="grandPrix_button" layoutX="605.0" layoutY="256.0" mnemonicParsing="false" onAction="#switchToGrandPrixsTable" text="Show All Grand Prixs" />
+             <Button id="adminPanel_button" layoutX="499.0" layoutY="307.0" mnemonicParsing="false" onAction="#switchToAdminPanel" text="Admin Panel" />
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>
